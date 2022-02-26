@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/img/magic-box.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Memory-game</title>
+</head>
+<body onclick="playMusic()">
+<div class="game-start hide-game">
+<header class="header">
+    <h1></h1>
+    <h2>Let's find pairs inside the boxes!</h2>
+</header>
+<section class="info-game">
+        <p class="step">Number of moves: 0</p>
+        <p class="sounds">Sounds: turn on</p>
+</section>
+<section class="memory-game">
+    <div class="memory-game-container">
+    <div class="memory-card" data-framework="bee">
+        <img class="front-face" src="./assets/img/bee.png" alt="Bee" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+    <div class="memory-card" data-framework="bee">
+        <img class="front-face" src="./assets/img/bee.png" alt="Bee" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+
+    <div class="memory-card" data-framework="chick">
+        <img class="front-face" src="./assets/img/chick.png" alt="Chick" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+    <div class="memory-card" data-framework="chick">
+        <img class="front-face" src="./assets/img/chick.png" alt="Chick" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+
+    <div class="memory-card" data-framework="fox">
+        <img class="front-face" src="./assets/img/fox.png" alt="Fox" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+    <div class="memory-card" data-framework="fox">
+        <img class="front-face" src="./assets/img/fox.png" alt="Fox" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+
+    <div class="memory-card" data-framework="jellyfish">
+        <img class="front-face" src="./assets/img/jellyfish.png" alt="Jellyfish" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+    <div class="memory-card" data-framework="jellyfish">
+        <img class="front-face" src="./assets/img/jellyfish.png" alt="Jellyfish" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+
+    <div class="memory-card" data-framework="koala">
+        <img class="front-face" src="./assets/img/koala.png" alt="Koala" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+    <div class="memory-card" data-framework="koala">
+        <img class="front-face" src="./assets/img/koala.png" alt="Koala" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+
+    <div class="memory-card" data-framework="whale">
+        <img class="front-face" src="./assets/img/whale.png" alt="Whale" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+    <div class="memory-card" data-framework="whale">
+        <img class="front-face" src="./assets/img/whale.png" alt="Whale" />
+        <img class="back-face" src="./assets/img/cardboard-box.png" alt="Cardboard" />
+    </div>
+    </div>
+    <audio preload="auto" class="audio-win">
+        <source src="./assets/sounds/win.mp3">
+    </audio>
+    <audio preload="auto" class="audio-match">
+        <source src="./assets/sounds/match.mp3">
+    </audio>
+    <audio preload="auto" class="audio-not-match">
+        <source src="./assets/sounds/not-match.mp3">
+    </audio>
+    <audio preload="auto" class="background-music">
+        <source src="./assets/sounds/backgroung-music.mp3">
+    </audio>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&#169;</p>
+            <p>2022</p>
+            <a class="github-username" href="https://github.com/AnastasyMeleshko" target="_blank">Anastasya Meleshko</a>
+        </div>
+        <div class="rss-link">
+            <a class="rss-logo" href="https://rs.school/js-stage0/" target="_blank"></a>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, .game-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+    position: relative;
+    font-family: 'Gideon Roman', cursive;
+}
+
+img {
+    border-radius: 5px;
+}
+
+h2, h1 {
+    font-family: 'Gideon Roman', cursive;
+    font-size: 3rem;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide-game {
+    opacity: 0.3;
+}
+
+.game-preview {
+    background-color: #1C7CCC;
+    border-radius: 100px;
+    border: 2px solid #000000;
+    width: 940px;
+    height: 600px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translateY(-50%) translateX(-50%);
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.game-preview p {
+    font-family: 'Gideon Roman', cursive;
+    font-size: 3rem;
+    color: #000000;
+}
+
+.game-preview p:last-child {
+    margin-bottom: 20px;
+}
+
+.name-input, .btn-play {
+    width: 60%;
+    font-size: 2.5rem;
+    color: #000000;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+.name-input {
+    padding: 5px 80px;
+    outline: none;
+}
+
+.btn-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.btn-play, .btn-return{
+    cursor: pointer;
+    font-size: 2.5rem;
+    width: 60%;
+    border-radius: 8px;
+    padding: 5px 20px;
+    color: #ffffff;
+    background-color: #011628;
+    height: 60px;
+    margin-top: 0;
+}
+
+.inform-text {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.btn-return {
+    margin-top: 20px;
+}
+
+.btn-records, .second-btn-records {
+    height: 60px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    width: 60%;
+    border-radius: 8px;
+    padding: 5px 20px;
+    color: #000;
+    background-color: #c5b15f;
+    margin-top: 30px;
+}
+
+.play-again {
+    margin-top: 40px;
+    width: 35%;
+}
+
+table, th, td, tr {
+    border: 1px solid #000000;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 65%;
+    font-size: 1.8rem;
+    background-color: #c5b15f;
+    vertical-align: center;
+    text-align: center;
+}
+
+.top-ten {
+    margin-bottom: 20px;
+}
+
+.header, .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.header {
+    flex-direction: column;
+}
+
+.info-game {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 770px;
+    justify-content: center;
+}
+
+.info-game p {
+    font-size: 1.5rem;
+    width: 45%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sounds {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.memory-game, .game-preview  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.memory-game-container {
+    width: 770px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+}
+
+.footer-content {
+    font-size: 1.5rem;
+}
+
+.footer-content, .info-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p {
+    margin-right: 10px;
+}
+
+.github-username {
+    color: #000000;
+}
+
+.github-username:hover, .sounds:hover {
+    color: #dc4719;
+}
+
+.rss-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background-image: url("../assets/img/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rss-logo:hover {
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}

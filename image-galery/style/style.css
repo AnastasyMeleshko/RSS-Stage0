@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Redressed', cursive;
+    background-color: #FFFFFF;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+:root {
+    --border-width: 15px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #6acba8;
+}
+
+.header-content-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo {
+    padding: 5px 20px;
+    margin-left: 20px;
+    width:25px;
+    height:50px;
+}
+
+.gradient-border {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-width);
+}
+
+.gradient-border::after {
+     position: absolute;
+     content: "";
+     top: 0;
+     left: 0;
+     z-index: -1;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(
+     60deg,
+     hsl(224, 85%, 66%),
+     hsl(269, 85%, 66%),
+     hsl(314, 85%, 66%),
+     hsl(359, 85%, 66%),
+     hsl(44, 85%, 66%),
+     hsl(89, 85%, 66%),
+     hsl(134, 85%, 66%),
+     hsl(179, 85%, 66%));
+     background-size: 300% 300%;
+     background-position: 0 50%;
+     border-radius: 50%;
+     border: 1px solid #000000;
+     animation: moveGradient 4s alternate infinite;
+ }
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.header-text {
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+.header-logo i {
+    font-size: 2rem;
+    padding-left: 3px;
+}
+
+.move-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/img/down-arrow.png");
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.30s ease-in-out;
+}
+
+.header-search i, .header-logo i {
+    color: black;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.header-search i:hover, .header-logo i:hover {
+    color: #e5296e;
+}
+
+.header-search {
+    width: 300px;
+    position: relative;
+}
+
+.header-search input {
+    width: 92%;
+    font-size: 1rem;
+    padding: 8px 35px 8px 12px;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.30s ease-in-out;
+    border: 1px solid #DDDDDD;
+    display: inline-flex;
+}
+
+input:focus, input:hover, .move-down:hover, .move-up:hover {
+    box-shadow: 0 0 5px #e5296e;
+    border: 1px solid #e5296e;
+}
+
+#search {
+    position: absolute;
+    top: 30%;
+    right: 40px;
+}
+
+.main-content {
+    width: 100%;
+    min-height: 900px;
+    background-image: url("../assets/img/bg-color.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    transition: all 0.30s ease-in-out;
+}
+
+.img {
+    width: 400px;
+    height: 320px;
+    margin-top: 20px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.30s ease-in-out;
+    display: inline-flex;
+}
+
+.img {
+    transform: scale(0.9);
+    transition: .3s ease-in-out;
+    border: 1px solid #000000;
+}
+
+.img:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.img-bg {
+    background-image: url("");
+}
+
+.footer {
+    width: 100%;
+    border-top: 5px solid #01a5b9;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.footer-content, .github-username, .info-link {
+    color: #000000;
+}
+
+.move-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/img/up-arrow.png");
+    background-size: cover;
+    cursor: pointer;
+    margin-right: 130px;
+    border-radius: 50%;
+    transition: all 0.30s ease-in-out;
+}
+
+.github-username, .info-link {
+    transition: 0.3s;
+}
+
+.github-username:hover, .info-link:hover {
+    color: #dc4719;
+}
+.footer-content {
+    font-size: 1.5rem;
+}
+
+.footer-content, .info-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p {
+    margin-right: 10px;
+}
+
+.info-links {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.rss-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background-image: url("../assets/img/rs_school_js.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rss-logo:hover {
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+
+@media(max-width:1400px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .main {
+        width: 95%;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .header-container {
+        margin: 10px 0;
+        padding: 20px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .header-container h2 {
+        padding: 5px 0;
+    }
+
+    .footer-container {
+        justify-content: center;
+    }
+
+    .github-username {
+        margin-right: 10px;
+    }
+
+    .header-logo {
+        margin-left: 0;
+    }
+
+    .move-up {
+        margin-right: 10px;
+    }
+
+}
+
+@media(max-width:480px) {
+    .header-container, .footer-container {
+        flex-direction: column;
+    }
+
+    .header-container h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .header-search {
+        width: 80%;
+        margin: auto;
+    }
+
+    .header-search input {
+        font-size: .7rem;
+    }
+
+    .github-username {
+        margin-right: 10px;
+    }
+
+    .github-username, .footer-content p {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        justify-content: center;
+    }
+
+    .rss-logo {
+        width: 100px;
+        margin-top:10px;
+    }
+
+    .header-logo {
+        margin-left: 0;
+    }
+
+    .move-down {
+        margin-bottom:10px;
+    }
+}

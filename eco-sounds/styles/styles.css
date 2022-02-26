@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+}
+
+.header-container {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.header-logo {
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/svg/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.header-logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.header-logo.active {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.header-logo.active:hover {
+    filter:none;
+}
+
+.header-menu {
+    margin-left: auto;
+}
+
+.menu-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.list-item {
+    color: #FFFFFF;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    color: #BDAE82;
+}
+
+.list-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.list-item.active {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.list-item.active:hover {
+    filter: none;
+}
+
+.main {
+    background-image: url("../assets/img/forest.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+    max-height: 100%;
+    margin: 0 auto;
+    transition: 0.3s;
+
+}
+
+.nightingale-bg {
+    background-image: url("../assets/img/1.jpg");
+}
+
+.thrush-bg {
+    background-image: url("../assets/img/2.jpg");
+}
+
+.robin-bg {
+    background-image: url("../assets/img/3.jpg");
+}
+
+.lark-bg {
+    background-image: url("../assets/img/4.jpg");
+}
+
+.warbler-bg {
+    background-image: url("../assets/img/5.jpg");
+}
+
+.forest-bg {
+    background-image: url("../assets/img/forest.jpg");
+}
+
+.play-btn {
+    width: 140px;
+    height: 140px;
+    background-image: url("../assets/svg/play.svg");
+    background-size: cover;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    transition: 0.3s;
+}
+
+.pause {
+    background-image: url("../assets/svg/pause.svg");
+}
+
+.play-btn:hover {
+    filter: brightness(3) saturate(0);
+}
+
+.bird {
+    background:url("../assets/img/bird.png");
+    background-size: cover;
+    width: 130px;
+    height: 175px;
+    position: absolute;
+}
+
+.flying-bird {
+    animation: birdFly 0.9s steps(10) infinite, birdMove 7s linear infinite;
+}
+
+.bird-1{
+    top: 8%;
+    left: -10%;
+    animation-delay:2s;
+}
+
+.bird-2{
+    top: 20%;
+    left: -10%;
+    animation-delay:3s;
+}
+
+.bird-3{
+    top: 12%;
+    left: -10%;
+    animation-delay:7s;
+}
+
+@keyframes birdFly{
+    0%{
+        background-position-x: 0;
+    }
+
+    100%{
+        background-position-x: 1305px;
+    }
+
+}
+
+@keyframes birdMove{
+    0%{
+        left: -10%;
+    }
+
+    100%{
+        left: 110%;
+    }
+
+}
+
+.info-block {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    max-width: 50%;
+    padding: 5px;
+    background-color: #FFFFFF;
+    border: 3px solid #000000;
+    border-radius: 4px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.info-text {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.footer-content, .github-username, .info-link {
+    color: #FFFFFF;
+}
+
+.github-username, .info-link {
+    transition: 0.3s;
+}
+
+.github-username:hover, .info-link:hover {
+    color: #BDAE82;
+}
+
+.footer-content, .info-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p {
+    margin-right: 20px;
+}
+
+.info-links {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-link {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.info-link:not(:last-child) {
+    margin-right: 20px;
+}
+
+.info-image {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border: 5px solid #000000;
+    border-radius: 50%;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    transition: 0.3s;
+}
+
+.info-image-bg-bird-1 {
+    background-image: url("../assets/img/01-bird.jpg");
+}
+
+.info-image-bg-bird-2 {
+    background-image: url("../assets/img/02-bird.jpg");
+}
+
+.info-image-bg-bird-3 {
+    background-image: url("../assets/img/03-bird.jpg");
+}
+
+.info-image-bg-bird-4 {
+    background-image: url("../assets/img/04-bird.jpg");
+}
+
+.info-image-bg-bird-5 {
+    background-image: url("../assets/img/05-bird.jpg");
+}
+
+.info-image-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rss-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background-image: url("../assets/svg/rss.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rss-logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.shown {
+    display: flex;
+}
